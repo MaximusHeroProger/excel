@@ -1,4 +1,4 @@
-import {capitalize} from '@core/utils'
+import { capitalize } from '@core/utils'
 
 export class DomListener {
   constructor($root, listeners = []) {
@@ -15,7 +15,7 @@ export class DomListener {
       if (!this[method]) {
         const name = this.name || ''
         throw new Error(
-            `Method ${method} is not implemented in ${name} Component`
+          `Method ${method} is not implemented in ${name} Component`
         )
       }
       this[method] = this[method].bind(this)
